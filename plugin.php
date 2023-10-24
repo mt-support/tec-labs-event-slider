@@ -1,15 +1,15 @@
 <?php
 /**
- * Plugin Name:       __TRIBE_BASE__ Extension: __TRIBE_NAME__
+ * Plugin Name:       The Events Calendar Extension: Event Slider
  * Plugin URI:        __TRIBE_URL__
- * GitHub Plugin URI: https://github.com/mt-support/tec-labs-__TRIBE_SLUG__
- * Description:       __TRIBE_DESCRIPTION__
- * Version:           __TRIBE_VERSION__
+ * GitHub Plugin URI: https://github.com/mt-support/tec-labs-event-slider
+ * Description:       Pure CSS event slider for The Events Calendar plugin
+ * Version:           1.0.0
  * Author:            The Events Calendar
  * Author URI:        https://evnt.is/1971
  * License:           GPL version 3 or any later version
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain:       __TRIBE_DOMAIN__
+ * Text Domain:       tec-labs-event-slider
  *
  *     This plugin is free software: you can redistribute it and/or modify
  *     it under the terms of the GNU General Public License as published by
@@ -25,18 +25,18 @@
 /**
  * Define the base file that loaded the plugin for determining plugin path and other variables.
  *
- * @since __TRIBE_VERSION__
+ * @since 1.0.0
  *
  * @var string Base file that loaded the plugin.
  */
-define( 'TRIBE_EXTENSION___TRIBE_SLUG_CLEAN_ALLCAPS___FILE', __FILE__ );
+define( 'TRIBE_EXTENSION_EVENTSLIDER_FILE', __FILE__ );
 
 /**
  * Register and load the service provider for loading the extension.
  *
- * @since __TRIBE_VERSION__
+ * @since 1.0.0
  */
-function tribe_extension___TRIBE_SLUG_CLEAN__() {
+function tribe_extension_event_slider() {
 	// When we don't have autoloader from common we bail.
 	if ( ! class_exists( 'Tribe__Autoloader' ) ) {
 		return;
@@ -44,16 +44,16 @@ function tribe_extension___TRIBE_SLUG_CLEAN__() {
 
 	// Register the namespace so we can the plugin on the service provider registration.
 	Tribe__Autoloader::instance()->register_prefix(
-		'\\Tribe\\Extensions\\__TRIBE_NAMESPACE__\\',
+		'\\Tribe\\Extensions\\EventSlider\\',
 		__DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'Tec',
-		'__TRIBE_SLUG__'
+		'event-slider'
 	);
 
 	// Deactivates the plugin in case of the main class didn't autoload.
-	if ( ! class_exists( '\Tribe\Extensions\__TRIBE_NAMESPACE__\Plugin' ) ) {
+	if ( ! class_exists( '\Tribe\Extensions\EventSlider\Plugin' ) ) {
 		tribe_transient_notice(
-			'__TRIBE_SLUG__',
-			'<p>' . esc_html__( 'Couldn\'t properly load "__TRIBE_BASE__ Extension: __TRIBE_NAME__" the extension was deactivated.', '__TRIBE_DOMAIN__' ) . '</p>',
+			'event-slider',
+			'<p>' . esc_html__( 'Couldn\'t properly load "The Events Calendar Extension: Event Slider" the extension was deactivated.', 'tec-labs-event-slider' ) . '</p>',
 			[],
 			// 1 second after that make sure the transient is removed.
 			1
@@ -67,8 +67,8 @@ function tribe_extension___TRIBE_SLUG_CLEAN__() {
 		return;
 	}
 
-	tribe_register_provider( '\Tribe\Extensions\__TRIBE_NAMESPACE__\Plugin' );
+	tribe_register_provider( '\Tribe\Extensions\EventSlider\Plugin' );
 }
 
 // Loads after common is already properly loaded.
-add_action( 'tribe_common_loaded', 'tribe_extension___TRIBE_SLUG_CLEAN__' );
+add_action( 'tribe_common_loaded', 'tribe_extension_event_slider' );
