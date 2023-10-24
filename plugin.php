@@ -149,7 +149,7 @@ function events_slider_shortcode($atts) {
 	$i = 1;
 	
 	//Initialize the output
-	$output .= '<div class="tec-event-slide""><ul class="tec-events-slides">';
+	$output .= '<div class="tec-event-slide"><ul class="tec-events-slides">';
 	
 	if ($query->have_posts()) {
 		while ($query->have_posts()) {
