@@ -43,7 +43,7 @@ class Plugin extends Service_Provider {
 	 *
 	 * @var string
 	 */
-	const FILE = TRIBE_EXTENSION_EVENTSLIDER_FILE;
+	const FILE = TEC_EXTENSION_EVENTSLIDER_FILE;
 
 	/**
 	 * @since 1.0.0
@@ -99,8 +99,8 @@ class Plugin extends Service_Provider {
 			return;
 		}
 
-		$this->container->register( Hooks::class );
 		$this->container->register( Assets::class );
+		$this->container->register( Hooks::class );
 	}
 
 	/**

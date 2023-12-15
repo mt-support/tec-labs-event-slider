@@ -21,10 +21,10 @@ use \WP_Query;
 class Shortcode {
 
 	public function register_shortcode() {
-		add_shortcode( 'events_slider', 'events_slider_shortcode' );
+		add_shortcode( 'events_slider', [ $this, 'events_slider_shortcode' ] );
 	}
 
-	public function events_slider_shortcode($atts) {
+	public function events_slider_shortcode( $atts ) {
 		// Merge user attributes with default attributes
 		$atts = shortcode_atts(
 			[

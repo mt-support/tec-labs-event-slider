@@ -1,0 +1,25 @@
+{
+  "name": "the-events-calendar/the-events-calendar",
+  "description": "Event Slider plugin by The Events Calendar",
+  "type": "wordpress-plugin",
+  "keywords": [
+    "wordpress",
+    "events",
+    "slider"
+  ],
+  "homepage": "https://theeventscalendar.com",
+  "license": "GPL-2.0",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "preferred-install": "dist",
+    "platform": {
+      "php": "7.4"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "TEC\\Events\\" : "src/TEC"
+    }
+  }
+}

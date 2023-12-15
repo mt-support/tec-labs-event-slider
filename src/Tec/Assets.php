@@ -33,8 +33,6 @@ class Assets extends Service_Provider {
 	public function register() {
 		$this->container->singleton( static::class, $this );
 		$this->container->singleton( 'extension.event_slider.assets', $this );
-
-		$plugin = tribe( Plugin::class );
 	}
 
 	public function load_assets() {

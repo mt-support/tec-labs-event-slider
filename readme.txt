@@ -1,4 +1,4 @@
-=== __TRIBE_BASE__ Extension: __TRIBE_NAME__ ===
+=== The Events Calendar Extension: Event Slider ===
 Contributors: theeventscalendar
 Donate link: https://evnt.is/29
 Tags: events, calendar

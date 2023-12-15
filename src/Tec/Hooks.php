@@ -43,6 +43,8 @@ class Hooks extends Service_Provider {
 		$this->container->singleton( static::class, $this );
 		$this->container->singleton( 'extension.event_slider.hooks', $this );
 
+		$this->register_shortcode();
+
 		$this->add_actions();
 		$this->add_filters();
 	}
@@ -54,8 +56,6 @@ class Hooks extends Service_Provider {
 	 */
 	protected function add_actions() {
 		add_action( 'tribe_load_text_domains', [ $this, 'load_text_domains' ] );
-
-		add_action( 'tribe_common_loaded', [ $this, 'register_shortcode' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'load_assets' ] );
 	}
 

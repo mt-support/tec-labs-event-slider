@@ -29,28 +29,30 @@
  *
  * @var string Base file that loaded the plugin.
  */
-define( 'TRIBE_EXTENSION_EVENTSLIDER_FILE', __FILE__ );
+define( 'TEC_EXTENSION_EVENTSLIDER_FILE', __FILE__ );
 
 /**
  * Register and load the service provider for loading the extension.
  *
  * @since 1.0.0
  */
-function tribe_extension_event_slider() {
+function tec_extension_event_slider() {
 	// When we don't have autoloader from common we bail.
 	if ( ! class_exists( 'Tribe__Autoloader' ) ) {
 		return;
 	}
 
+	error_log('tribe_extension_event_slider');
+
 	// Register the namespace so we can the plugin on the service provider registration.
 	Tribe__Autoloader::instance()->register_prefix(
-		'\\Tribe\\Extensions\\EventSlider\\',
-		__DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'Tec',
+		'\\TEC\\Extensions\\EventSlider\\',
+		__DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'TEC',
 		'event-slider'
 	);
 
 	// Deactivates the plugin in case of the main class didn't autoload.
-	if ( ! class_exists( '\Tribe\Extensions\EventSlider\Plugin' ) ) {
+	if ( ! class_exists( '\TEC\Extensions\EventSlider\Plugin' ) ) {
 		tribe_transient_notice(
 			'event-slider',
 			'<p>' . esc_html__( 'Couldn\'t properly load "The Events Calendar Extension: Event Slider" the extension was deactivated.', 'tec-labs-event-slider' ) . '</p>',
@@ -67,5 +69,7 @@ function tribe_extension_event_slider() {
 		return;
 	}
 
-	tribe_register_provider( '\Tribe\Extensions\EventSlider\Plugin' );
+	tribe_register_provider( '\TEC\Extensions\EventSlider\Plugin' );
 }
+
+add_action( 'tribe_common_loaded', 'tec_extension_event_slider' );

@@ -9,7 +9,7 @@
 
 namespace TEC\Extensions\EventSlider;
 
-use TEC__Abstract_Plugin_Register as Abstract_Plugin_Register;
+use Tribe__Abstract_Plugin_Register as Abstract_Plugin_Register;
 
 /**
  * Class Plugin_Register.
@@ -26,7 +26,7 @@ class Plugin_Register extends Abstract_Plugin_Register {
 	protected $main_class   = Plugin::class;
 	protected $dependencies = [
 		'parent-dependencies' => [
-			'Tribe__Events__Main' => '6.1.2.2-dev',
+			'Tribe__Events__Main' => '6.2.8.2-dev',
 		],
 	];
 }
