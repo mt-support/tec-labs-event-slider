@@ -4,10 +4,10 @@
  *
  * @since 1.0.0
  *
- * @package Tribe\Extensions\EventSlider
+ * @package TEC\Extensions\EventSlider
  */
 
-namespace Tribe\Extensions\EventSlider;
+namespace TEC\Extensions\EventSlider;
 
 use TEC\Common\Contracts\Service_Provider;
 /**
@@ -15,7 +15,7 @@ use TEC\Common\Contracts\Service_Provider;
  *
  * @since 1.0.0
  *
- * @package Tribe\Extensions\EventSlider
+ * @package TEC\Extensions\EventSlider
  */
 class Plugin extends Service_Provider {
 	/**
@@ -99,16 +99,6 @@ class Plugin extends Service_Provider {
 			return;
 		}
 
-		// Do the settings.
-		// TODO: Remove if not using settings
-		$this->get_settings();
-
-		// Start binds.
-
-
-
-		// End binds.
-
 		$this->container->register( Hooks::class );
 		$this->container->register( Assets::class );
 	}
@@ -137,64 +127,5 @@ class Plugin extends Service_Provider {
 
 		$this->container->singleton( Plugin_Register::class, $plugin_register );
 		$this->container->singleton( 'extension.event_slider', $plugin_register );
-	}
-
-	/**
-	 * Get this plugin's options prefix.
-	 *
-	 * Settings_Helper will append a trailing underscore before each option.
-	 *
-	 * @return string
-     *
-	 * @see \Tribe\Extensions\EventSlider\Settings::set_options_prefix()
-	 *
-	 * TODO: Remove if not using settings
-	 */
-	private function get_options_prefix() {
-		return (string) str_replace( '-', '_', 'tec-labs-event-slider' );
-	}
-
-	/**
-	 * Get Settings instance.
-	 *
-	 * @return Settings
-	 *
-	 * TODO: Remove if not using settings
-	 */
-	private function get_settings() {
-		if ( empty( $this->settings ) ) {
-			$this->settings = new Settings( $this->get_options_prefix() );
-		}
-
-		return $this->settings;
-	}
-
-	/**
-	 * Get all of this extension's options.
-	 *
-	 * @return array
-	 *
-	 * TODO: Remove if not using settings
-	 */
-	public function get_all_options() {
-		$settings = $this->get_settings();
-
-		return $settings->get_all_options();
-	}
-
-	/**
-	 * Get a specific extension option.
-	 *
-	 * @param $option
-	 * @param string $default
-	 *
-	 * @return array
-	 *
-	 * TODO: Remove if not using settings
-	 */
-	public function get_option( $option, $default = '' ) {
-		$settings = $this->get_settings();
-
-		return $settings->get_option( $option, $default );
 	}
 }

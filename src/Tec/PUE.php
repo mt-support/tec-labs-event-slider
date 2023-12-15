@@ -4,10 +4,10 @@
  *
  * @since 1.0.0
  *
- * @package Tribe\Extensions\EventSlider;
+ * @package TEC\Extensions\EventSlider;
  */
 
-namespace Tribe\Extensions\EventSlider;
+namespace TEC\Extensions\EventSlider;
 
 use Tribe__PUE__Checker;
 
@@ -18,7 +18,7 @@ use TEC\Common\Contracts\Service_Provider;
  *
  * @since 1.0.0
  *
- * @package Tribe\Extensions\EventSlider;
+ * @package TEC\Extensions\EventSlider;
  */
 class PUE extends Service_Provider {
 

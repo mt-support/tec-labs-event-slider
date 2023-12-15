@@ -10,10 +10,10 @@
  *
  * @since 1.0.0
  *
- * @package Tribe\Extensions\EventSlider
+ * @package TEC\Extensions\EventSlider
  */
 
-namespace Tribe\Extensions\EventSlider;
+namespace TEC\Extensions\EventSlider;
 
 use TEC\Common\Contracts\Service_Provider;
 
@@ -22,7 +22,7 @@ use TEC\Common\Contracts\Service_Provider;
  *
  * @since 1.0.0
  *
- * @package Tribe\Extensions\EventSlider
+ * @package TEC\Extensions\EventSlider
  */
 class Assets extends Service_Provider {
 	/**
@@ -35,6 +35,14 @@ class Assets extends Service_Provider {
 		$this->container->singleton( 'extension.event_slider.assets', $this );
 
 		$plugin = tribe( Plugin::class );
+	}
 
+	public function load_assets() {
+		wp_enqueue_style(
+			'tec-events-slider',
+			plugins_url('tec-labs-event-slider/src/css/tec-events-slider.css'),
+			[],
+			Plugin::VERSION
+		);
 	}
 }
