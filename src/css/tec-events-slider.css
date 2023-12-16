@@ -51,6 +51,7 @@ ul.tec-events-slides input  {
 }
 input:checked + .tec-event-slide-container .tec-event-slide-image  {
     opacity: 1;transform: scale(1);transition: opacity 2s ease-in-out;
+    z-index:999;
 }
 input:checked + .tec-event-slide-container .tec-event-carousel-controls label,input:checked + .tec-event-slide-container .nav label  {
     display: block;
