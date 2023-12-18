@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       The Events Calendar Extension: Event Slider
- * Plugin URI:        __TRIBE_URL__
+ * Plugin URI:        https://theeventscalendar.com/extensions/event-slider/
  * GitHub Plugin URI: https://github.com/mt-support/tec-labs-event-slider
  * Description:       Pure CSS event slider for The Events Calendar plugin
  * Version:           1.0.0
