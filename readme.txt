@@ -1,5 +1,5 @@
 === The Events Calendar Extension: Event Slider ===
-Contributors: theeventscalendar
+Contributors: theeventscalendar, gugaalves
 Donate link: https://evnt.is/29
 Tags: events, calendar
 Requires at least: 4.9
@@ -9,11 +9,11 @@ Stable tag: 1.0.0
 License: GPL version 3 or any later version
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-A Pure CSS event slider, providing a shortcode to show events.
+A Pure CSS event slider, providing the shortcode [events_slider] to show events.
 
 == Description ==
 
-Available Parameters (attributes):
+The [events_slider] accepts the following parameters (attributes):
 
 - 'posts_per_page'
 
@@ -21,7 +21,7 @@ Number of events to display.
 
 Default value: 5
 
-Note: The default values will be used when no custom value is added on the shortcode
+Note: The default values will be used when no custom value is added to the shortcode
 
 - 'tag'
 
@@ -61,9 +61,9 @@ Default value - true
 
 - 'color1'
 
-Define the main color.
+Define the primary color.
 
-Accepts hexadecimal colors. Don't forget to include the # at the beggining!
+Accepts hexadecimal colors. Don't forget to include the # at the beginning!
 
 Default value - #00000
 
@@ -71,16 +71,16 @@ Default value - #00000
 
 Define the secondary color.
 
-Accepts hexadecimal colors only. Don't forget to include the # at the beggining!
+Accepts hexadecimal colors only. Don't forget to include the # at the beginning!
 
 Default value - #FFFFFF
 
 == Installation ==
 
-Install and activate like any other plugin!
+Install and activate it like any other plugin!
 
 * You can upload the plugin zip file via the *Plugins ‣ Add New* screen
-* You can unzip the plugin and then upload to your plugin directory (typically _wp-content/plugins_) via FTP
+* You can unzip the plugin and then upload it to your plugin directory (typically _wp-content/plugins_) via FTP
 * Once it has been installed or uploaded, simply visit the main plugin list and activate it
 
 == Frequently Asked Questions ==
@@ -91,10 +91,12 @@ Please visit our [extension library](https://theeventscalendar.com/extensions/) 
 
 = What if I experience problems? =
 
-We're always interested in your feedback and our [Help Desk](https://support.theeventscalendar.com/) are the best place to flag any issues. Do note, however, that the degree of support we provide for extensions like this one tends to be very limited.
+We're always interested in your feedback, and our [Help Desk](https://support.theeventscalendar.com/) is the best place to flag any issues. 
+
+However, note that the degree of support we provide for extensions like this one tends to be very limited.
 
 == Changelog ==
 
-= [1.0.0] 2023-12-20 =
+= [1.0.0] 2023-12-19 =
 
 * Initial release
