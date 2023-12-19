@@ -67,7 +67,7 @@ Accepts hexadecimal colors. Don't forget to include the # at the beginning!
 
 Default value - #00000
 
-- 'color1'
+- 'color2'
 
 Define the secondary color.
 
