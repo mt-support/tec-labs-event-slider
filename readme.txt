@@ -91,11 +91,15 @@ Please visit our [extension library](https://theeventscalendar.com/extensions/) 
 
 = What if I experience problems? =
 
-We're always interested in your feedback, and our [Help Desk](https://support.theeventscalendar.com/) is the best place to flag any issues. 
+We're always interested in your feedback, and our [Help Desk](https://support.theeventscalendar.com/) is the best place to flag any issues.
 
 However, note that the degree of support we provide for extensions like this one tends to be very limited.
 
 == Changelog ==
+
+= [1.0.1] 2024-01-05 =
+
+* Fix - Correct folder name so autoloading works correctly.
 
 = [1.0.0] 2023-12-19 =
 
