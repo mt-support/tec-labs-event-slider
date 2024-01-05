@@ -110,7 +110,7 @@ class Shortcode {
 					   $output .= '<img src="' . get_the_post_thumbnail_url() . '" alt="' . esc_attr($alt_text) . '" height="'. $height .'" width="'. $width .'">';
 				} else {
 					$upload = wp_upload_dir();
-					$fallback_image = plugins_url('tec-labs-event-slider/src/resources/img/placeholder.png');
+					$fallback_image = plugins_url('/resources/img/placeholder.png',dirname(__FILE__));
 					$output .= '<img src="' . $fallback_image . '" alt="placeholder image" height="'. $height .'" width="'. $width .'">';
 				}
 				$output .= '</a>';
