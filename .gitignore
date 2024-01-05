@@ -1,0 +1,14 @@
+.DS_Store
+.idea
+node_modules
+.phpstorm*
+.vscode
+bun.lockb
+
+# by default ignore all, need a vendor dep in the repo? use !vendor/acme
+vendor/*
+!vendor/composer
+
+# get from translate.wordpress.org as needed
+lang/*.po
+lang/*.mo
