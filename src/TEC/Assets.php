@@ -38,7 +38,7 @@ class Assets extends Service_Provider {
 	public function load_assets() {
 		wp_enqueue_style(
 			'tec-events-slider',
-			plugins_url('tec-labs-event-slider/src/css/tec-events-slider.css'),
+			plugins_url('css/tec-events-slider.css',dirname(__FILE__) ),
 			[],
 			Plugin::VERSION
 		);
