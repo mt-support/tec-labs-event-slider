@@ -4,7 +4,7 @@
  * Plugin URI:        https://theeventscalendar.com/extensions/event-slider/
  * GitHub Plugin URI: https://github.com/mt-support/tec-labs-event-slider
  * Description:       Pure CSS event slider for The Events Calendar plugin
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            The Events Calendar
  * Author URI:        https://evnt.is/1971
  * License:           GPL version 3 or any later version
