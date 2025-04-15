@@ -35,7 +35,8 @@ class Shortcode {
 				'width' => '640', // Default width in pixels
 				'dots' => 'true',
 				'color1' => '#000000',// Color 1, in hexadecimal
-				'color2' => '#FFFFFF' // Color 2, in hexadecimal
+				'color2' => '#FFFFFF', // Color 2, in hexadecimal
+				'autorotate' => '0', // Add this line - 0 means disabled, any other number is seconds
 			],
 			$atts
 		);
@@ -43,6 +44,7 @@ class Shortcode {
 		$height = esc_attr($atts['height']);
 		$width = esc_attr($atts['width']);
 		$quantity = esc_attr($atts['posts_per_page']);
+		$autorotate = intval($atts['autorotate']);
 
 		$output = '<style>';
 		$output .= '
@@ -65,7 +67,9 @@ class Shortcode {
 		$output .='</style>';
 
 		// Initialize output
-		$output .= '<div class="tec-events-slider">';
+		$output .= '<div class="tec-events-slider"' . 
+			($autorotate > 0 ? ' data-autorotate="' . esc_attr($autorotate) . '"' : '') . 
+			'>';
 
 		// WP Query to get events
 		$args = array(
@@ -110,7 +114,7 @@ class Shortcode {
 					   $output .= '<img src="' . get_the_post_thumbnail_url() . '" alt="' . esc_attr($alt_text) . '" height="'. $height .'" width="'. $width .'">';
 				} else {
 					$upload = wp_upload_dir();
-					$fallback_image = plugins_url('/resources/img/placeholder.png',dirname(__FILE__));
+					$fallback_image = plugins_url('tec-labs-event-slider/src/resources/img/placeholder.png');
 					$output .= '<img src="' . $fallback_image . '" alt="placeholder image" height="'. $height .'" width="'. $width .'">';
 				}
 				$output .= '</a>';
