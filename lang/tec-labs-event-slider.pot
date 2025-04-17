@@ -1,0 +1,47 @@
+# Copyright (C) 2024 The Events Calendar
+# This file is distributed under the GPL version 3 or any later version.
+msgid ""
+msgstr ""
+"Project-Id-Version: The Events Calendar Extension: Event Slider 1.0.1\n"
+"Report-Msgid-Bugs-To: The Events Calendar <https://support.theeventscalendar.com/>\n"
+"Last-Translator: The Events Calendar <https://support.theeventscalendar.com/>\n"
+"Language-Team: The Events Calendar <https://support.theeventscalendar.com/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-06-30T00:00:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.8.1\n"
+"X-Domain: tec-labs-event-slider\n"
+
+#: src/TEC/Shortcode.php:117
+msgid "placeholder image"
+msgstr ""
+
+#: src/TEC/Shortcode.php:139
+msgid "No events found."
+msgstr ""
+
+#: plugin.php:64
+msgid "Couldn't properly load \"The Events Calendar Extension: Event Slider\" the extension was deactivated."
+msgstr ""
+
+#. Plugin Name of the plugin
+msgid "The Events Calendar Extension: Event Slider"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://theeventscalendar.com/extensions/event-slider/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Pure CSS event slider for The Events Calendar plugin"
+msgstr ""
+
+#. Author of the plugin
+msgid "The Events Calendar"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://evnt.is/1971"
+msgstr "" 
