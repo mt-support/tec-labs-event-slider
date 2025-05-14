@@ -10,6 +10,7 @@
 namespace TEC\Extensions\EventSlider;
 
 use \WP_Query;
+use TEC\Extensions\EventSlider\Assets;
 
 /**
  * Class Shortcode
@@ -60,6 +61,11 @@ class Shortcode {
 		$width      = esc_attr( $atts['width'] );
 		$quantity   = esc_attr( $atts['posts_per_page'] );
 		$autorotate = intval( $atts['autorotate'] );
+
+		// Enable autorotation if needed
+		if ($autorotate > 0) {
+			Assets::enable_autorotation();
+		}
 
 		$output = '<style>';
 		$output .= '
